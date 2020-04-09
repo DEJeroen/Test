@@ -1,1 +1,25 @@
-test
+<html>
+<!-- cookietest -->
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+        <title>cookietest</title>
+
+        <script>
+                // Redirect to UMD bundle for Edge browser
+                if (/Edge/.test(navigator.userAgent)) { document.location = 'cookietest.html' + document.location.search; }
+        </script>
+</head>
+
+<body>
+    <div id="container" class="no-tools" >
+    </div>
+
+    <script data-default-locale="Nl" type="module" src="cookietest.js"></script>
+        <script nomodule>
+                document.location = 'cookietest.html' + document.location.search;
+        </script>
+
+</body>
+</html>
